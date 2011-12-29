@@ -213,11 +213,9 @@
 			var tooltip = $('<div>',{
 				id			: 'tour_tooltip',
 				className 	: 'tooltip',
-				html		: '<p>'+step_config.text+'</p><span class="tooltip_arrow"></span>'
+				html		: '<p>'+step_config.text+'</p>'
 			}).css({
-				'display'			: 'none',
-				'background-color'	: bgcolor,
-				'color'				: color
+				'display'			: 'none'				
 			});
 			
 			//the css properties the tooltip should have
@@ -239,84 +237,84 @@
 						'left'	: e_l,
 						'top'	: e_t + e_h + 'px'
 					};
-					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_TL');
+					tooltip.addClass('tooltip_arrow_TL');
 					break;
 				case 'TR'	:
 					properties = {
 						'left'	: e_l + e_w - tooltip.width() + 'px',
 						'top'	: e_t + e_h + 'px'
 					};
-					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_TR');
+					tooltip.addClass('tooltip_arrow_TR');
 					break;
 				case 'BL'	:
 					properties = {
 						'left'	: e_l + 'px',
 						'top'	: e_t - tooltip.height() + 'px'
 					};
-					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_BL');
+					tooltip.addClass('tooltip_arrow_BL');
 					break;
 				case 'BR'	:
 					properties = {
 						'left'	: e_l + e_w - tooltip.width() + 'px',
 						'top'	: e_t - tooltip.height() + 'px'
 					};
-					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_BR');
+					tooltip.addClass('tooltip_arrow_BR');
 					break;
 				case 'LT'	:
 					properties = {
 						'left'	: e_l + e_w + 'px',
 						'top'	: e_t + 'px'
 					};
-					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_LT');
+					tooltip.addClass('tooltip_arrow_LT');
 					break;
 				case 'LB'	:
 					properties = {
 						'left'	: e_l + e_w + 'px',
 						'top'	: e_t + e_h - tooltip.height() + 'px'
 					};
-					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_LB');
+					tooltip.addClass('tooltip_arrow_LB');
 					break;
 				case 'RT'	:
 					properties = {
 						'left'	: e_l - tooltip.width() + 'px',
 						'top'	: e_t + 'px'
 					};
-					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_RT');
+					tooltip.addClass('tooltip_arrow_RT');
 					break;
 				case 'RB'	:
 					properties = {
 						'left'	: e_l - tooltip.width() + 'px',
 						'top'	: e_t + e_h - tooltip.height() + 'px'
 					};
-					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_RB');
+					tooltip.addClass('tooltip_arrow_RB');
 					break;
 				case 'T'	:
 					properties = {
 						'left'	: e_l + e_w/2 - tooltip.width()/2 + 'px',
 						'top'	: e_t + e_h + 'px'
 					};
-					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_T');
+					tooltip.addClass('tooltip_arrow_T');
 					break;
 				case 'R'	:
 					properties = {
 						'left'	: e_l - tooltip.width() + 'px',
 						'top'	: e_t + e_h/2 - tooltip.height()/2 + 'px'
 					};
-					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_R');
+					tooltip.addClass('tooltip_arrow_R');
 					break;
 				case 'B'	:
 					properties = {
 						'left'	: e_l + e_w/2 - tooltip.width()/2 + 'px',
 						'top'	: e_t - tooltip.height() + 'px'
 					};
-					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_B');
+					tooltip.addClass('tooltip_arrow_B');
 					break;
 				case 'L'	:
 					properties = {
 						'left'	: e_l + e_w  + 'px',
 						'top'	: e_t + e_h/2 - tooltip.height()/2 + 'px'
 					};
-					tooltip.find('span.tooltip_arrow').addClass('tooltip_arrow_L');
+					tooltip.addClass('tooltip_arrow_L');
 					break;
 			}
 			

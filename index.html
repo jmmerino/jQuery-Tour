@@ -5,8 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="description" content="Website Tour with jQuery" />
         <meta name="keywords" content="tour, walkthrough, jquery, plugin, steps, explain, describe, take a tour"/>
-        
-		<link rel="stylesheet" type="text/css" href="css/jquery.jquerytour.css" />
+        		
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.min.js"></script>
@@ -70,71 +69,87 @@
 
         <script type="text/javascript">
 
-        if(!(jQuery.Storage.get("tour") == "true")){
+        if(!(jQuery.Storage.get("tour") == "true"))
+        {
         	var config = {
         	    mainTitle: "New Features!",
         	    saveCookie: true, 
-        		steps: [
-        		{
-					"name" 		: "tour_1",
-					"bgcolor"	: "black",
-					"color"		: "white",
-					"position"	: "TL",
-					"text"		: "You can create a tour to explain the functioning of your app",
-					"time" 		: 5000
-				},
-				{
-					"name" 		: "tour_2",
-					"bgcolor"	: "black",
-					"color"		: "white",
-					"text"		: "Give a class to the points of your walkthrough",
-					"position"	: "BL",
-					"time" 		: 5000
-				},
-				{
-					"name" 		: "tour_3",
-					"bgcolor"	: "black",
-					"color"		: "white",
-					"text"		: "Customize the navigation buttons",
-					"position"	: "BL",
-					"time" 		: 5000
-				},
-				{
-					"name" 		: "tour_4",
-					"bgcolor"	: "black",
-					"color"		: "white",
-					"text"		: "You can also use the autoplay function where the user can just sit back and watch the whole tour",
-					"position"	: "TL",
-					"time" 		: 5000
-				},
-				{
-					"name" 		: "tour_5",
-					"bgcolor"	: "black",
-					"color"		: "white",
-					"text"		: "You can indicate the direction of the tooltip arrow for each tour point",
-					"position"	: "TL",
-					"time" 		: 5000
-				},
-				{
-					"name" 		: "tour_6",
-					"bgcolor"	: "#111199",
-					"color"		: "white",
-					"text"		: "Mark important tour points in a different color",
-					"position"	: "BL",
-					"time" 		: 5000
-				},
-				{
-					"name" 		: "tour_7",
-					"bgcolor"	: "black",
-					"color"		: "white",
-					"text"		: "Automatically scrolls to the right place of the website",
-					"position"	: "TL",
-					"time" 		: 5000
-				}]
-        	};
+          		steps: [
+          		{
+                "name"    : "tour_1",
+                "bgcolor" : "black",
+                "color"   : "white",
+                "position"  : "L",
+                "text"    : "You can create a tour to explain the functioning of your app",
+                "time"    : 5000
+              },
+          		{
+      					"name" 		: "tour_1",
+      					"bgcolor"	: "black",
+      					"color"		: "white",
+      					"position"	: "LT",
+      					"text"		: "You can create a tour to explain the functioning of your app",
+      					"time" 		: 5000
+      				},
+      				{
+                "name"    : "tour_1",
+                "bgcolor" : "black",
+                "color"   : "white",
+                "position"  : "LB",
+                "text"    : "You can create a tour to explain the functioning of your app",
+                "time"    : 5000
+              },
+      				{
+      					"name" 		: "tour_2",
+      					"bgcolor"	: "black",
+      					"color"		: "white",
+      					"text"		: "Give a class to the points of your walkthrough",
+      					"position"	: "BL",
+      					"time" 		: 5000
+      				},
+      				{
+      					"name" 		: "tour_3",
+      					"bgcolor"	: "black",
+      					"color"		: "white",
+      					"text"		: "Customize the navigation buttons",
+      					"position"	: "BL",
+      					"time" 		: 5000
+      				},
+      				{
+      					"name" 		: "tour_4",
+      					"bgcolor"	: "black",
+      					"color"		: "white",
+      					"text"		: "You can also use the autoplay function where the user can just sit back and watch the whole tour",
+      					"position"	: "TL",
+      					"time" 		: 5000
+      				},
+      				{
+      					"name" 		: "tour_5",
+      					"bgcolor"	: "black",
+      					"color"		: "white",
+      					"text"		: "You can indicate the direction of the tooltip arrow for each tour point",
+      					"position"	: "TL",
+      					"time" 		: 5000
+      				},
+      				{
+      					"name" 		: "tour_6",
+      					"bgcolor"	: "#111199",
+      					"color"		: "white",
+      					"text"		: "Mark important tour points in a different color",
+      					"position"	: "BL",
+      					"time" 		: 5000
+      				},
+      				{
+      					"name" 		: "tour_7",
+      					"bgcolor"	: "black",
+      					"color"		: "white",
+      					"text"		: "Automatically scrolls to the right place of the website",
+      					"position"	: "TL",
+      					"time" 		: 5000
+      				}]
+          	};
 
         	$.tour.start(config);
-
         }
 
         </script>
