@@ -13,10 +13,11 @@
  * "bgcolor"	: "black",
  * "color"		: "white",
  * "position"	: "TL",
- * "text"		: "You can create a tour to explain the functionality of your app",
+ * "text"		  :   "You can create a tour to explain the functionality of your app",
  * "time" 		: 5000
- * 
- * 
+ * "fn_foward": function object to be executed in the step, when executed foward button 
+ * "fn_backward": function object to be executed when this step is executed by back button 
+ *  
  */
 
 (function($){
@@ -69,7 +70,8 @@
 			Tour.next();
 		},
 		
-		prev: function(){
+		prev: function(){		  		  		  
+		  
 			if(!$.tour.options.autoplay){
 				if(Tour.step > 2)
 					$('#prevstep').show();
@@ -81,10 +83,14 @@
 			if(Tour.step <= 1)
 				return false;
 			--Tour.step;
+			
+			Tour.executeStepFn( 'prev' );
 			Tour.showTooltip();
 		},
 		
 		next: function(){
+		  
+		  
 			
 			if(!$.tour.options.autoplay){
 				if(Tour.step > 0){
@@ -103,6 +109,8 @@
 				return false;
 			}
 			++Tour.step;
+			
+			Tour.executeStepFn( 'next' );
 			Tour.showTooltip();
 		},
 		
@@ -194,6 +202,16 @@
 		
 		hideTooltip: function(){
 			$('#tour_tooltip').remove();
+		},
+		
+		executeStepFn: function( direction ){		  
+		  var step_config   = $.tour.options.steps[Tour.step - 1],
+		      fn = step_config['fn_' + direction];
+
+      if (fn && typeof fn === 'function'){
+        fn.call() 
+      }		      		     		   				  
+		  
 		},
 		
 		showTooltip: function(){

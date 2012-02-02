@@ -69,8 +69,8 @@
 
         <script type="text/javascript">
 
-        if(!(jQuery.Storage.get("tour") == "true"))
-        {
+        //f(!(jQuery.Storage.get("tour") == "true"))
+        //{
         	var config = {
         	    mainTitle: "New Features!",
         	    saveCookie: true, 
@@ -81,7 +81,13 @@
                 "color"   : "white",
                 "position"  : "L",
                 "text"    : "You can create a tour to explain the functioning of your app",
-                "time"    : 5000
+                "time"    : 5000,
+                'fn_next' : function(){
+                  console.log('adelante 1');
+                },
+                'fn_prev' : function(){
+                  console.log('atras 1');
+                }
               },
           		{
       					"name" 		: "tour_1",
@@ -89,7 +95,13 @@
       					"color"		: "white",
       					"position"	: "LT",
       					"text"		: "You can create a tour to explain the functioning of your app",
-      					"time" 		: 5000
+      					"time" 		: 5000,
+      					'fn_next' : function(){
+                  console.log('adelante 2');
+                },
+                'fn_prev' : function(){
+                  console.log('atras 2');
+                }
       				},
       				{
                 "name"    : "tour_1",
@@ -97,7 +109,13 @@
                 "color"   : "white",
                 "position"  : "LB",
                 "text"    : "You can create a tour to explain the functioning of your app",
-                "time"    : 5000
+                "time"    : 5000,
+                'fn_next' : function(){
+                  console.log('adelante 3');
+                },
+                'fn_prev' : function(){
+                  console.log('atras 3');
+                }
               },
       				{
       					"name" 		: "tour_2",
@@ -105,7 +123,13 @@
       					"color"		: "white",
       					"text"		: "Give a class to the points of your walkthrough",
       					"position"	: "BL",
-      					"time" 		: 5000
+      					"time" 		: 5000,
+      					'fn_next' : function(){
+                  console.log('adelante 4');
+                },
+                'fn_prev' : function(){
+                  console.log('atras 4');
+                }
       				},
       				{
       					"name" 		: "tour_3",
@@ -150,7 +174,7 @@
           	};
 
         	$.tour.start(config);
-        }
+        //}
 
         </script>
     </body>
